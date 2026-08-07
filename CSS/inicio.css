@@ -194,11 +194,31 @@ footer {
 
 
 @media (max-width: 768px) {
-  .principal nav ul,
-  .navegacion nav ul {
+.principal nav ul,
+.navegacion nav ul {
     flex-direction: column;
     align-items: center;
   }
+
+  /* MenÃº para compu */
+.principal nav ul,
+.navegacion nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 30px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.principal nav a,
+.navegacion nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 18px;
+}
 
   .bienvenida img {
     height: 350px;
