@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>solicitar servicios</title>
+    <link rel="stylesheet" href="CSS/solicitar.css">
+
+    <!-- SweetAlert -->
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+  <script>
+    function mostrarAlerta() {
+      swal("¡Se solicito tu servicio con exito!", "Gracias por reservar con nosotros.", "success");
+    }
+
+    function resetearFormulario() {
+      document.querySelector(".formulario").reset();
+      swal("¡Formulario limpio!", "Puedes hacer una nueva solicitud.", "info");
+    }
+  </script>
+
+</head>
+<body>
+    <header>
+        <h1>Solicita tu servicio!</h1>
+    </header>
+
+    <div class="atras">
+        <nav>
+            <ul>
+                <li><a href="index.html">Atras</a></li>
+            </ul>
+        </nav>
+    </div>
+
+<main class="contenido">
+    <section class="solicitar">
+      <h1 class="titulo">Solicita ya</h1>
+      <p class="descripcion">Completa los datos para solocitar tu servicio con exito</p>
+
+    <form class="formulario" id="formulario" action="https://formspree.io/f/xwleklde" method="post">
+      <div class="formulario">
+        <div class="campo">
+          <label for="origen">Lugar de recidencia</label>
+          <input type="text" id="origen" name="origen" placeholder="Ej: San José centro" required>
+        </div>
+
+        <div class="campo">
+          <label for="servicio">Servicio</label>
+          <input type="text" id="servicio" name="servicio" placeholder="Ej: Reparacion de lavadora" required>
+        </div>
+
+        <div class="fila">
+          <div class="campo">
+            <label for="descripcion">Describe el problema</label>
+            <input type="text" id="descripcion" name="descripcion" placeholder="Ej: Raya en pantalla" required>
+          </div>
+
+          <div class="campo">
+          <label for="nombre">Nombre </label>
+          <input type="text" id="nombre" name="nombre" placeholder="Ej: María Pérez">
+        </div>
+
+        <div class="campo">
+          <label for="telefono">Teléfono de contacto</label>
+          <input type="tel" id="telefono" name="telefono" placeholder="Ej: +506 8888 8888">
+        </div>
+
+        <div class="botones">
+          <button class="button" type="submit"  id="btn-solicitar"  >solicitar</button>
+          <button class="button btn limpia" type="button" onclick="resetearFormulario()" >Limpiar</button>
+        </div>
+        </div>
+    </form>
+    </section>
+ </main>
+
+
+
+        
+    <footer>
+        <div class="footer4fix">
+            <div class="seccion">
+                <h2>Agenda con nosotros!</h2>
+                <p>4Fix Technology te brindara experiencia, seguridad y 
+                    confiabilidad en todos sus servicios</p>
+            </div>
+
+            <div class="seccion">
+                <h2>Contactanos!!</h2>
+                <p>Correo: info@4fixtechnology.com</p>
+                <p>Numero: 4081 2485</p>
+                <p>Ubicacion: San Pablo, Heredia, Costa Rica</p>
+            </div>
+            <div class="seccion">
+                <h2>Taller autorizado de Samsung</h2>
+                <p>Ademas trabajamos con marcas como:</p>
+                <p>Truvolt</p>
+                <p>Midea</p>
+                <p>Honor</p>
+                <p>Hunter</p>
+            </div>
+            <div class="footer-redes">
+                <h2>Siguenos en nuestras redes</h2>
+                <div class="redes">
+                  <a href="https://www.instagram.com/4fix.technology"><img src="Media/icono-redes-sociales-vector-instagram-7-junio-2021-bangkok-tailandia_53876-136728.jpg.avif" alt="log-inst"></a>
+                  <a href="https://www.facebook.com/share/1CSiPFQ9id/"><img src="Media/facebook-logo-facebook-logo-transparent-facebook-icon-transparent-free-free-png.png.webp" alt="logo-face"></a>
+                  <a href="mailto:info@4fixtechnology.com"><img src="Media/google-mail-gmail-icon-logo-symbol-free-png.png.webp" alt="Correo"></a>
+               </div>
+            </div>
+
+        </div>
+        <div class="pie-footer">
+            <p>&copy; 2026 4fixtechnology.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
